@@ -1,73 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- Required meta tags -->
-		<meta charset="utf-8">
-		<title>тест сайт1</title>
+	<meta charset="utf-8">
+	<title>form</title>
+	<script type="text/javascript">
+		function valid (form) {
+			var fail = false;
+			var firstname = form.firstname.value;
+			var lastname = form.lastname.value;
+			var email = form.email.value;
+			var age = form.age.value;
 
-		<meta name="vievport" content="width=device-width, initial-scale=1">
-		<!-- latest compiled and minified css -->
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+			var adr_pattern = /[0-9a-z_.-]+@[0-9a-z_.-]+\.[a-z]{2,5}/i;
 
-		</head>
+			if(firstname == "" || firstname == " ")
+				fail = "вы не ввели свое имя";
+			else if(lastname == "" || lastname == " ")
+				fail = "вы не ввели свою фамилию";
+			else if(adr_pattern.test(email) == false)
+				fail = "вы ввели email неправильно";
+			else if(age == "" || age == " ")
+				fail = "вы не ввели age";
+			if(fail)
+				alert(fail);
+			else
+				window.location = ""
+		}
+	</script>
+</head>
 <body>
-	<div class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">project name</a>
-			</div>
-			<div class="navbar-collapse collapse">
-				<form class="navbar-form navbar-right">
-					<div class="form-group">
-						<input type="text" placeholder="email" class="form-control">
-					</div>
-					<div class="form-group">
-						<input type="password" placeholder="пароль" class="form-control">
-					</div>
-					<button type="submit" class="btn btn-success">вход</button>
-				</form>
-			</div>
-		</div>
-	</div>
-	<div class="jumbotron">
-		<div class="container">
-			<h1>hello</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			<p><a href="#" class="btn btn-primary btn-lg">know more &raquo;</a></p>
-		</div>
-	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4">
-				<h2>header</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				<p><a href="#" class="btn btn-default">know more &raquo;</a></p>
-			</div>
-			<div class="col-md-4">
-				<h2>header2</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				<p><a href="#" class="btn btn-default">know more &raquo;</a></p>
-			</div><div class="col-md-4">
-				<h2>header3</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-				<p><a href="#" class="btn btn-default">know more &raquo;</a></p>
-			</div>
-		</div>
-		<hr>
-		<footer>
-			<p>&copy; all rights reserved 2019</p>
-		</footer>
-	</div>
+	<form action="" method="post" name="test" id="form">
 
-<!-- jQuery -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<label for="firstname">Имя</label>
+		<input type="text" name="firstname" placeholder="Имя" id="firstname"/><br/>
+		<label for="lastname">Фамилия</label>
+		<input type="text" name="lastname" placeholder="Фамилия" id="lastname"/><br/>
+		<label for="email">email</label>
+		<input type="" name="email" placeholder="email" id="email"/><br/>
+		<label for="age">ваш возраст</label>
+		<input type="" name="age" placeholder="ваш возраст" id="age"/><br/>
 
+		<input type="button" onclick="valid(document.getElementById('form'))" name="submit" value="Готово" />
+
+	</form>
 </body>
 </html>
