@@ -2,46 +2,123 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>form</title>
-	<script type="text/javascript">
-		function valid (form) {
-			var fail = false;
-			var firstname = form.firstname.value;
-			var lastname = form.lastname.value;
-			var email = form.email.value;
-			var age = form.age.value;
+	<title>Form GitHub</title>
 
-			var adr_pattern = /[0-9a-z_.-]+@[0-9a-z_.-]+\.[a-z]{2,5}/i;
+	<style>
+			body {
+					min-height: 100%;
+					height: 100%;
+			}
+			td {
+					padding: 5px;
+			}
+			th {
+					padding: 5px;
+			}
+			img {
+					max-height: 200px;
+			}
+			.remove-btn {
+					background: red;
+					color: white;
+			}
+	</style>
 
-			if(firstname == "" || firstname == " ")
-				fail = "вы не ввели свое имя";
-			else if(lastname == "" || lastname == " ")
-				fail = "вы не ввели свою фамилию";
-			else if(adr_pattern.test(email) == false)
-				fail = "вы ввели email неправильно";
-			else if(age == "" || age == " ")
-				fail = "вы не ввели age";
-			if(fail)
-				alert(fail);
-			else
-				window.location = ""
-		}
-	</script>
-</head>
+	</head>
 <body>
-	<form action="" method="post" name="test" id="form">
+	<div>
+		<form action="" method="post" name="test" id="submitForm">
 
-		<label for="firstname">Имя</label>
-		<input type="text" name="firstname" placeholder="Имя" id="firstname"/><br/>
-		<label for="lastname">Фамилия</label>
-		<input type="text" name="lastname" placeholder="Фамилия" id="lastname"/><br/>
-		<label for="email">email</label>
-		<input type="text" name="email" placeholder="email" id="email"/><br/>
-		<label for="age">ваш возраст</label>
-		<input type="text" name="age" placeholder="ваш возраст" id="age"/><br/>
+			<label for="firstName">name</label>
+			<input type="text" name="firstName" placeholder="name" value="" id="firstName"/><br/>
+			<label for="email">email</label>
+			<input type="text" name="email" placeholder="email" value="" id="email"/><br/>
+			<label for="age">age</label>
+			<input type="number" min="0" max="200" name="age" placeholder="age" value="" id="age"/><br/>
+			<label for="picture">picture</label>
+			<input type="text" id="picture" placeholder="Enter picture url ...">
 
-		<input type="button" onclick="valid(document.getElementById('form'))" name="submit" value="Готово" />
+			<br>
+			<!-- <a id="linkToGoogle" href="https://google.com.ua">Google</a> -->
 
-	</form>
+			<button id="submitBtn" type="submit" onclick="valid(document.getElementById('submitForm'))">Submit</button>
+
+
+			<!-- <input id="submitBtn" type="submit" onclick="valid(document.getElementById('submitForm'))" value="Готово" /> -->
+
+			<!-- <button id='add' onclick="Add(); return false;">Add</button>
+			<button onclick="delAll(); return false;">Delete all</button> -->
+
+		</form>
+
+		<table id="users-table" class="users-table" border="1">
+			<thead>
+					<tr>
+							<th>#</th>
+							<th>Username:</th>
+							<th>Email:</th>
+							<th>Age</th>
+							<th>Picture</th>
+							<th>Delete</th>
+							<!-- <th> <input type="button" id ="addDep" value="Add" onclick = "add()" </th>
+							<th> <input type="button" id ="deleteDep" value="x" onclick = "deleteRow(this)" </th> -->
+					</tr>
+			</thead>
+			<tbody>
+
+			</tbody>
+		</table>
+
+<br><br>
+<button class="load-currencies">Load Currencies</button>
+
+		<table class="currencies" border="1">
+			<thead>
+					<tr>
+							<th>#</th>
+							<th>The code:</th>
+							<th>The currency:</th>
+							<th>The course:</th>
+					</tr>
+			</thead>
+			<tbody>
+
+			</tbody>
+		</table>
+
+		<br><br>
+		<button class="load-countries">Load Countries</button>
+
+				<table class="countries" border="1">
+					<thead>
+							<tr>
+									<th>The name of the country:</th>
+									<!-- <th>The region:</th>
+									<th>The population:</th>
+									<th>The area:</th> -->
+									<th>The alpha3Code:</th>
+									<th>The capital:</th>
+									<th>The currencies:</th>
+									<th>The languages:</th>
+									<th>The borders:</th>
+									<th>The flag:</th>
+							</tr>
+					</thead>
+					<tbody>
+
+					</tbody>
+				</table>
+
+
+	</div>
+
+	<script
+					src="https://code.jquery.com/jquery-3.4.1.min.js"
+					integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+					crossorigin="anonymous"></script>
+
+
+	<script type="text/javascript" src='appl.js'></script>
+
 </body>
 </html>
