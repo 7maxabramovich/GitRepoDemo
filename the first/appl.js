@@ -108,9 +108,14 @@ let loadCurrencies = () => {
 let renderCountriesHtml = (countries) => {
     let htmlStr = ``;
           for(let country of countries) {
+            country.borderNames = [](border => border);
+            for(let border of country.borders) {
+              console.log(borders);
+
+
+          for(let country of countries) {
             let currenciesArray = country.currencies.map(currency => currency.name);
             let languagesArray = country.languages.map(language => language.name);
-            let bordersArray = country.borders.map(border => border);
 
             /*let currenciesArray = country.currencies.map(currency => {
                 return currency.name;
