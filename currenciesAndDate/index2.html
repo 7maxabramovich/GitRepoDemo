@@ -2,9 +2,8 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Form GitHub</title>
-
-	<style>
+	<title>dateGitHub</title>
+		<style>
 			body {
 					min-height: 100%;
 					height: 100%;
@@ -18,35 +17,35 @@
 			img {
 					max-height: 200px;
 			}
-			.remove-btn {
-					background: red;
-					color: white;
-			}
-	</style>
-
+				#go-up {
+						position: fixed;
+						right: 10px;
+						bottom: 10px;
+				}
+		</style>
 	</head>
 <body>
 	<div>
 			<input type="date" id="date">
+			<input type="text" id="search" placeholder="search">
 
 <br><br>
-<button class="load-currencies">Load Currencies</button>
 		<table class="currencies" border="1">
 			<thead>
 					<tr>
 							<th>#</th>
-							<th>The code:</th>
-							<th>The currency:</th>
-							<th>The course:</th>
+							<th data-attr="code" class="sortable">The code:</th>
+							<th data-attr="currency" class="sortable">The currency:</th>
+							<th data-attr="course" class="sortable">The course:</th>
 							<th>The cc:</th>
 							<th>The date:</th>
 					</tr>
 			</thead>
-
-			<tbody>
-			</tbody>
+				<tbody>
+				</tbody>
 		</table>
 			<br><br>
+				<button id="go-up">Наверх</button>
 		</div>
 	<script
 					src="https://code.jquery.com/jquery-3.4.1.min.js"

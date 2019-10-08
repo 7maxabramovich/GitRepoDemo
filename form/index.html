@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Form GitHub</title>
+	<title>formGitHub</title>
 
 	<style>
 			body {
@@ -22,15 +22,31 @@
 					background: red;
 					color: white;
 			}
+			.sortable {
+					cursor: pointer;
+					position: relative;
+			}
+			.sortable.active {
+					background: yellow;
+			}
+			.sortable.active:not(.reversed):after {
+					content: 'a';
+					position: absolute;
+					right: 0;
+					top: 0;
+			}
+			.sortable.active.reversed:after {
+					content: 'b';
+					position: absolute;
+					right: 0;
+					top: 0;
+			}
 	</style>
 
 	</head>
 <body>
 	<div>
 		<form action="" method="post" name="test" id="submitForm">
-
-			<input type="date">
-
 			<label for="firstName">name</label>
 			<input type="text" name="firstName" placeholder="name" value="" id="firstName"/><br/>
 			<label for="email">email</label>
@@ -78,6 +94,7 @@
 			<thead>
 					<tr>
 							<th>#</th>
+							<th>The r030:</th>
 							<th>The code:</th>
 							<th>The currency:</th>
 							<th>The course:</th>
@@ -94,15 +111,14 @@
 				<table class="countries" border="1">
 					<thead>
 							<tr>
-									<th>The name of the country:</th>
-									<!-- <th>The region:</th>
-									<th>The population:</th>
-									<th>The area:</th> -->
-									<th>The alpha3Code:</th>
-									<th>The capital:</th>
+									<th data-attr="name" class="sortable">The name of the country:</th>
+									<th data-attr="population" class="sortable">The population of the country:</th>
+									<th data-attr="area" class="sortable">The area of the country:</th>
+									<th data-attr="capital" class="sortable">The capital:</th>
 									<th>The currencies:</th>
 									<th>The languages:</th>
 									<th>The borders:</th>
+									<th>The altSpellings:</th>
 									<th>The flag:</th>
 							</tr>
 					</thead>
