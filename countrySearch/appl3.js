@@ -125,3 +125,36 @@ $(document).ready(() => {
 //search
 
 loadCountries();
+
+
+
+
+
+// let countries = [];
+//
+// let renderHtml = (countries) => {
+//   let countriesHtmlStr = '';
+//   for(let country of countries) {
+//     countriesHtmlStr += `<tr>
+//     <td>${country.name}</td>
+//     <td>${country.capital}</td>
+//     <td>${country.region}</td>
+//     <td>${country.population}</td>
+//     <td>${country.area}</td>
+//     <tr>`;
+//   }
+//   $('table > tbody')
+// };
+//
+// $(document.ready(() => {
+//   $.ajax({
+//     url: 'https://restcountries.eu/rest/v2/all',
+//     success: (data) => {
+//       countries = data;
+//       renderHtml(data);
+//     }
+//   })
+//
+// $('filterCountries').on('keyup')
+//
+// });

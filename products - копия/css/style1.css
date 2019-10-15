@@ -1,0 +1,17 @@
+.products {
+  width: 200px;
+  height: 300px;
+  border: 1px solid black;
+  margin: 10px;
+  float: left;
+  text-align: center;
+}
+.products button {
+  display: block;
+  margin: 20px auto;
+}
+.products img {
+  margin: 10px;
+  width: 170px;
+  height: auto;
+}
