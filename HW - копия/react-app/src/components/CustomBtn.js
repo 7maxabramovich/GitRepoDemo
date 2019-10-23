@@ -12,7 +12,7 @@ function CustomBtn(props) {
     };
   return (
       <button className="custom-btn"
-      onClick={ changeCount }>Submit {count} <Moment format="DD/MM/YYYY hh:mm:ss">{ props.date }</Moment></button>
+      onClick={ changeCount }>Submit {count} <Moment format="DD/MM/YYYY mm:ss">{ props.date }</Moment></button>
   );
 }
 
