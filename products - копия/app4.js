@@ -218,11 +218,11 @@ $('#distance').text(distanceHint);
 
 //game over
 
-// let z = 5;
-// if (clicks > z) {
-// alert('game over. press key f5');
-// }
-// console.log(z - clicks);
+let z = 5;
+if (clicks > z) {
+alert('game over. press key f5');
+}
+console.log(z - clicks);
 
 console.log(target);
 console.log('x: ' + e.offsetX, 'y: ' + e.offsetY);

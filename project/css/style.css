@@ -1,0 +1,337 @@
+@charset "UTF-8";
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+html {height: 100%;}
+body {
+	width: 100%;
+	height: 100%;
+	color: #333;
+	background: #f7f7f7;
+	font-size: 1em;
+	font-family: "Segoe UI", sans-serif;
+	line-height: 135%;
+}
+
+button {
+	color: #f48b8b;
+	margin-left: 5px;
+	font-size: 1em;
+	text-decoration: none;
+	transition: all.6s ease;
+	-moz-transition: all.6s ease;
+	-webkit-transition: all.6s ease;
+	-ms-transition: all.6s ease;
+}
+
+button:hover {
+	color: #8b9ff5;
+	text-decoration: none;
+	transition: all.6s ease;
+	-moz-transition: all.6s ease;
+	-webkit-transition: all.6s ease;
+	-ms-transition: all.6s ease;
+}
+
+button:active {color: #8ce4a6;}
+
+img {
+	max-width: 100%;
+	height: 150px;
+	width: auto\9;
+}
+
+hr {
+	display: block;
+	border: 0;
+	height: 1px;
+	border-top: 1px solid #ccc;
+	padding: 0;
+
+}
+
+.left {float: left;}
+.right {float: right;}
+.clear {clear: both;}
+
+/* Selection Block */
+
+::selection {background: #f58b8b; color: #fff;}
+::-moz-selection {background: #f58b8b; color: #fff;}
+::-webkit-selection {background: #f58b8b; color: #fff;}
+::-ms-selection {background: #f58b8b; color: #fff;}
+
+header, footer {
+	width: 98%;
+	background-color: #fff;
+	float: left;
+}
+
+header {
+	border-bottom: 2px solid silver;
+	padding: 1%;
+}
+
+#logo {
+	font-size: 2em;
+	font-family: Comic Sans MS, sans-serif;
+	color: silver;
+}
+
+#about_us_new {
+	font-size: 1.5em;
+	font-family: Comic Sans MS, sans-serif;
+	color: red;
+}
+
+.contact {
+	font-size: 1.5em;
+	font-family: Comic Sans MS, sans-serif;
+	margin-left: 35px;
+}
+
+input[type=text].field {
+	border-radius: 5px;
+	border: 2px solid silver;
+	padding: 5px;
+	margin-left: 20px;
+}
+
+input[type=text].field:focus {border: 2px solid #f58b8b;}
+
+#menu {
+	color: #666;
+	font-family: Comic Sans MS, sans-serif;
+	font-size: 1.7em;
+}
+#menu hr {
+	width: 500px;
+	max-width: 100%;
+	margin-top: 10px;
+	margin-bottom: 2%;
+}
+
+#menuHrefs button {
+padding: 5px;
+border-radius: 5px;
+margin-right: 5px;
+color: #626262;
+}
+
+#menuHrefs button:hover {background-color: #ececec;}
+
+/*основные стили для сайта*/
+
+#wrapper {
+	float: left;
+	width: 100%;
+	margin-top: 20px;
+}
+
+#wrapper #products {
+	float: left;
+	width: 80%;
+	margin-left: 10%;
+}
+
+#wrapper #products article {
+	float: left;
+	border: 1px solid silver;
+	box-sizing: border-box;
+	border-radius: 5px;
+	background-color: #fafafa;
+	min-height: 400px;
+}
+
+@media (min-width: 900px) {
+#wrapper #products article {
+	width: 31.33333%;
+	margin-right: 2%;
+}}
+
+@media (max-width: 899px) and (min-width: 700) {
+#wrapper #products article {
+	width: 80%;
+	margin-left: 10%;
+	margin-bottom: 10px;
+}}
+
+@media (max-width: 699px) {
+#wrapper #products article {
+	width: 100%;
+	margin-bottom: 10px;
+}}
+
+#wrapper #products article img {
+	width: auto;
+	height: auto;
+	border-radius: 5px 5px 0px 0px;
+	border-bottom: 1px solid silver;
+	margin-bottom: 10px;
+}
+
+#wrapper #products article h2 {
+	width: auto;
+	text-align: center;
+	margin-left: 0.1%;
+	font-weight: normal;
+	font-size: 1.7em;
+	color: #4a4a4a;
+}
+#wrapper #products article p {
+	width: 80%;
+	text-align: center;
+	margin-left: 5%;
+	text-indent: 1em;
+	margin-top: 8px;
+}
+
+#wrapper #products article button {
+	padding: 5px;
+	background-color: #ed7b7b;
+	margin-left: 12%;
+	border-radius: 5px;
+	color: #fff;
+	float: left;
+	margin-top: 8px;
+}
+
+#wrapper #products article button:hover {background-color: #7feb6d;}
+
+/*стили для странички о нас*/
+
+#about_us {
+	width: 60%;
+	float: left;
+	background-color: #fafafa;
+	border-radius: 5px;
+	border: 1px solid silver;
+	box-sizing: border-box;
+	padding: 1%;
+}
+
+#columRight {
+	width: 30%;
+	float: left;
+	margin-left: 5%;
+	background-color: #fafafa;
+	border-radius: 5px;
+	border: 1px solid silver;
+	box-sizing: border-box;
+	padding: 1%;
+}
+
+/*стили для формы*/
+
+form {
+	width: 60%;
+	margin-left: 20%;
+	float: left;
+}
+
+form label {
+	float: left;
+	width: 100%;
+	margin-bottom: 10px;
+	}
+
+form input {
+	border-radius: 5px;
+	border: 2px solid silver;
+	padding: 5px;
+	float: left;
+	clear: both;
+	width: 40%;
+	background-color: #fafafa;
+	margin-bottom: 10px;
+}
+
+form input:focus, form input:focus {border: 2px solid #f58b8b;}
+
+form textarea {
+	width: 60%;
+	float: left;
+	clear: both;
+	background-color: #fafafa;
+	border: 2px solid silver;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 1.7em;
+}
+
+form #send {
+	float: left;
+	padding: 10px;
+	background-color: #f37a7a;
+	cursor: pointer;
+	border-radius: 5px;
+	margin-top: 10px;
+	font-size: 2em;
+	color: #fff;
+}
+
+form #send:hover {
+	background-color: #bdf37a;
+}
+
+/*центральный блок сайта*/
+
+#main_soc_bkock {
+	width: 100%;
+	padding: 2% 0;
+	border-bottom: 2px solid silver;
+	border-top: 2px solid silver;
+	margin: 20px 0;
+	float: left;
+	background: url('../img/soc.jpg') repeat-x center;
+	height: 100px;
+}
+
+#main_soc_bkock_in {
+	text-align: center;
+	padding: 1%;
+	height: 120px;
+	background-color: #fafafa;
+	border: 1px solid silver;
+	box-sizing: border-box;
+	border-radius: 7px;
+	width: 300px;
+	max-width: 98%;
+}
+
+#main_soc_bkock_in button {
+	float: left;
+	padding: 5px 5px;
+	background-color: #e9af32;
+	border-radius: 6px;
+	color: #fff;
+	margin-left: 30%;
+	margin-top: 5px;
+}
+
+/*стили для футера*/
+
+footer {
+	padding: 1%;
+	border-top: 2px solid silver;
+	margin-top: 10px;
+	height: auto;
+	padding-bottom: 2%;
+}
+
+footer img {width: 10%; float: left; margin-right: 5px;}
+
+#page-wrap:after {
+	content: "";
+	display: block;
+}
+
+footer, #page-wrap:after {height: 10px;}
+
+#page-wrap {
+	min-height: 90%;
+	margin-bottom: -10px;
+}
