@@ -12,6 +12,7 @@
 				}
 		</style>
 	</head>
+
 <body>
 
 <select class="select" name="select">
@@ -21,7 +22,7 @@
 	<option value="sel4">select4</option>
 </select>
 <input type="image" src="images/charge.jpg" style="width: 40px" name="search" placeholder="search...">
-<input type="text" name="search" placeholder="search...">
+<input id="search" type="text" name="search" placeholder="search...">
 <br>
 <button type="button" name="create"><img src="images/charge.jpg" style="width: 40px"/>создать</button>
 <br>
@@ -33,6 +34,7 @@
 <br>
 <button type="button" name="copy">резервные копии</button>
 <br>
+
 
 <div>
 	<button id="go-up">Наверх</button>
@@ -49,6 +51,22 @@
 
 <script	src="jquery-3.4.1.min.js"></script>
 <script type="text/javascript" src='app4.js'></script>
+
+<script type="text/javascript" src="db1.json"></script>
+<script type="text/javascript">
+	function load() {
+     var myData = JSON.parse(data);
+     console.log(myData.length);
+	     var div = document.getElementById('data');
+     for(var i = 0; i < myData.length; i++)
+     {
+        div.innerHTML = div.innerHTML + "<p class='inner' id=" + i + ">" + myData[i].name + "</p>" + "<br>";
+     }
+ }
+ </script>
+						 <div id="data"></div>
+
+
 
 </body>
 </html>

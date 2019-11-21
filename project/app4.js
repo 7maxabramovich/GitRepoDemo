@@ -16,11 +16,96 @@ output = () => {(pattern, '', output).replace};
 output();
 
 
+// var x = new XMLHttpRequest();
+// x.open("GET", `https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json&date=20191010`, true);
+// x.onload = function (){
+//     console.log( x.responseText);
+// }
+// x.send(null);
 
-// var json = '[{"a": 1}]';
+// var x = new XMLHttpRequest();
+// x.open("GET", `http://localhost:3000/db.json`, true);
+// x.onload = function (){
+//     console.log( x.responseText);
+// }
+// x.send();
+
+$.ajax({
+    url: `http://localhost:3000/users`,
+    method: 'GET',
+    error: (e) => {
+        console.log(e);
+    },
+    success: (data) => {
+        console.log(data);
+    }
+});
+
+
+var data = {
+  name: 'Виктор',
+  surname: 'Цой'
+};
+var boundary = String(Math.random()).slice(2);
+var boundaryMiddle = '--' + boundary + '\r\n';
+var boundaryLast = '--' + boundary + '--\r\n'
+var body = ['\r\n'];
+for (var key in data) {
+  // добавление поля
+  body.push('Content-Disposition: form-data; name="' + key + '"\r\n\r\n' + data[key] + '\r\n');
+}
+body = body.join(boundaryMiddle) + boundaryLast;
+// Тело запроса готово, отправляем
+var xhr = new XMLHttpRequest();
+xhr.open('POST', `http://localhost:3000/users`, true);
+xhr.setRequestHeader('Content-Type', 'multipart/form-data; boundary=' + boundary);
+xhr.onreadystatechange = function() {
+  if (this.readyState != 4) return;
+  alert( this.responseText );
+}
+xhr.send(body);
+
+
+
+
+class Obj5 {
+    constructor(cost, name, image, description) {
+        this.cost = cost;
+        this.name = name;
+        this.image = image;
+        this.description = description;
+      }
+};
+
+var charge5 = new Obj5(12, "charge", "images/charge.jpg", "ch");
+var flesh5 = new Obj5(10, "flesh", "images/flesh.jpg", "fl");
+var mouse5 = new Obj5(15, "mouse", "images/mouse.jpg", "mo");
+
+var obj5 = {"12341": charge5, "12342": flesh5, "12343": mouse5};
+
+localStorage.setItem('cart', JSON.stringify(obj5));
+// console.log(obj5);
+let y = localStorage.getItem('cart', JSON.parse(localStorage.getItem('cart')));
+// console.log(y);
+
+// function getValue() {
+//     console.log($("#search").val())
+//   };
+// $('#search').on('keyup', getValue);
+
+
+let student = {
+  name: 'John',
+  age: 30,
+  isAdmin: false,
+  courses: ['html', 'css', 'js'],
+  wife: true
+};
+
+let json = JSON.stringify(student);
 // console.log(json);
-//
-//
+
+
 // var cart = {}; //my cart
 //
 // $('document').ready(function() {

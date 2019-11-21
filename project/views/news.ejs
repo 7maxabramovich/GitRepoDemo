@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>dateGitHub</title>
+	</head>
+
+<body>
+<% include blocks/header.ejs %>
+<h1>news with ID - <%= newsId %></h1>
+<h2>news with ID - <%= newParam %><%= obj.id %></h2>
+<h2>news with ID - <%= obj.title %><%= obj.id %></h2>
+<ul>
+  <% obj.p.forEach(function(item) { %>
+      <li><%= item %></li>
+  <% }); %>
+</ul>
+
+
+<select class="select" name="select">
+	<option value="sel1">select1</option>
+	<option value="sel2">select2</option>
+	<option value="sel3">select3</option>
+	<option value="sel4">select4</option>
+</select>
+
+</body>
+</html>
